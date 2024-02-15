@@ -3,7 +3,7 @@ project(HexGame)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(HexGame src/main.cpp
+add_executable(game src/main.cpp
         src/common/Graph.tpp
         include/common/Graph.h
         include/game/Game.h
@@ -24,8 +24,8 @@ add_executable(HexGame src/main.cpp
         src/game/GameSettings.cpp
         include/game/GameSettings.h
         include/algorithms/PathAlgorithm.h
-        "include/algorithms/DepthFirstSearch.h"
-        src/algortihms/DepthFirstSearch.tpp
+        include/algorithms/DepthFirstSearch.h
+        src/algorithms/DepthFirstSearch.tpp
         src/player/MonteCarloAIPlayer.cpp
         include/player/MonteCarloAIPlayer.h
 )
