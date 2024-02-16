@@ -3,6 +3,7 @@ project(HexGame)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Game executable
 add_executable(game src/main.cpp
         src/common/Graph.tpp
         include/common/Graph.h
@@ -29,3 +30,21 @@ add_executable(game src/main.cpp
         src/player/MonteCarloAIPlayer.cpp
         include/player/MonteCarloAIPlayer.h
 )
+
+Include(FetchContent)
+
+FetchContent_Declare(
+        Catch2
+        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+        GIT_TAG        v3.4.0 # or a later release
+)
+
+FetchContent_MakeAvailable(Catch2)
+
+# Test executable
+enable_testing()
+add_executable(tests tests/tests.cpp
+        tests/common/graph_tests.cpp)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+
+
