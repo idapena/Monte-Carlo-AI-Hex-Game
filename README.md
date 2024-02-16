@@ -7,8 +7,6 @@ A console Hex Game implementation using C++. The game AI uses a Monte Carlo appr
 - Make version 4.4.1 or greater (GNU Make).
 
 ## Installation
-
-
 1. Create a folder called `build` inside the project folder.
 2. Open a terminal and run the following command to generate makefiles: ``cmake -G "MinGW Makefiles" -S ./ -D CMAKE_C_COMPILER=gcc CMAKE_CXX_COMPILER=g++ -B build``
 3. Navigate to the build folder: ``cd build``
