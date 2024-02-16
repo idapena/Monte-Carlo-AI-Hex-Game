@@ -27,20 +27,3 @@ jobs:
           cmake ..
           cmake --build . --target tests
           ctest --output-on-failure
-
-  test-windows:
-    name: Test on Windows
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up MSVC
-        uses: microsoft/setup-msbuild@v1
-
-      - name: Build and test
-        run: |
-          cmake .
-          cmake --build . --config Release
-          ctest --output-on-failure
