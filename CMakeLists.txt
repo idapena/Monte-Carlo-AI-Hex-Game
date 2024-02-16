@@ -46,16 +46,4 @@ enable_testing()
 add_executable(tests tests/tests.cpp
         tests/common/graph_tests.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
-
-# Add individual tests using add_test()
-add_test(
-        NAME GraphNodeTest
-        COMMAND tests --testcase "Graph nodes are created correctly"
-)
-
-add_test(
-        NAME GraphEdgeTest
-        COMMAND tests --testcase "Graph edges are created correctly"
-)
-
-
+target_include_directories(tests PRIVATE ${CMAKE_SOURCE_DIR}/tests)
