@@ -1,2 +1,7 @@
 /cmake-build-debug/*
+/build/*
 .idea
+*.cmake
+*.o
+*.d
+*.obj

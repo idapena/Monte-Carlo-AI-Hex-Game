@@ -21,6 +21,6 @@ public:
                          std::function<bool(const V &token)> condition) const override;
 };
 
-#include "../../src/algortihms/DepthFirstSearch.tpp"
+#include "../../src/algorithms/DepthFirstSearch.tpp"
 
 #endif //HEXGAME_DEPTHFIRSTSEARCH_H
