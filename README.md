@@ -10,9 +10,8 @@ A console Hex Game implementation using C++. The game AI uses a Monte Carlo appr
 1. Create a folder called `build` inside the project folder.
 2. Open a terminal and run the following command to generate makefiles: ``cmake -G "MinGW Makefiles" -S ./ -D CMAKE_C_COMPILER=gcc CMAKE_CXX_COMPILER=g++ -B build``
 3. Navigate to the build folder: ``cd build``
-4. Compile the game: ``mingw32-make -f Makefile # Windows make -f Makefile         # Linux/Mac``
-- Navigate to the build folder .
-- Execute the following command to compile the game: `mingw32-make -f Makefile` on Windows and `make -f Makefile`.
+4. Compile the game: ``mingw32-make -f Makefile # Windows`` and ``make -f Makefile # Linux/Mac``
+5. Run tests (optional): ``ctest ``
 
 ## Troubleshooting
 - If using a different CMake generator, change the `-G "MinGW Makefiles"` parameter.
